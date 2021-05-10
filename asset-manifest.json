@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/Vaccine-Tracker/static/css/main.142274c2.chunk.css",
+    "main.js": "/Vaccine-Tracker/static/js/main.44800712.chunk.js",
+    "runtime-main.js": "/Vaccine-Tracker/static/js/runtime-main.a00a4f95.js",
+    "static/js/2.efc107c8.chunk.js": "/Vaccine-Tracker/static/js/2.efc107c8.chunk.js",
+    "static/js/3.4f9d097b.chunk.js": "/Vaccine-Tracker/static/js/3.4f9d097b.chunk.js",
+    "index.html": "/Vaccine-Tracker/index.html",
+    "static/js/2.efc107c8.chunk.js.LICENSE.txt": "/Vaccine-Tracker/static/js/2.efc107c8.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.a00a4f95.js",
+    "static/js/2.efc107c8.chunk.js",
+    "static/css/main.142274c2.chunk.css",
+    "static/js/main.44800712.chunk.js"
+  ]
+}
