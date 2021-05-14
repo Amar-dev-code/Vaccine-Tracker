@@ -1,6 +1,6 @@
 # Vaccine Tracker 💉
 
-***This web app looks for the availability of Vaccines in India for the pincode entered.***
+***This web app looks for the availability of Covid Vaccines in India for the pincode entered.***
 
 ## Tech Stack
 language: `TypeScript`  
