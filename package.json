@@ -2,6 +2,7 @@
   "name": "vaccine",
   "version": "0.1.0",
   "private": true,
+  "homepage":"https://amar-dev-code.github.io/Vaccine-Tracker",
   "dependencies": {
     "@material-ui/core": "^4.11.4",
     "@testing-library/jest-dom": "^5.12.0",
@@ -14,6 +15,7 @@
     "axios": "^0.21.1",
     "contentful": "^8.3.5",
     "formik": "^2.2.6",
+    "gh-pages": "^3.1.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-redux": "^7.2.4",
@@ -24,8 +26,9 @@
     "web-vitals": "^1.1.2"
   },
   "scripts": {
+    "deploy": "npm run build&&gh-pages -d build",
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "set \"GENERATE_SOURCEMAP=false\" && react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },

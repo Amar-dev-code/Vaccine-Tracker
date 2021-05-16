@@ -12,7 +12,6 @@ import { GETVACCINEINFO } from "../VaccineTracker/store/vaccineTracker.types";
 function* fetchUser(action: any): any {
   try {
     const response = yield call(getVaccineResults, action.request);
-    console.log("Response", response.data.sessions);
     yield put(onApiSuccess(response.data.centers));
   } catch (e) {
     yield put(onApiFailure());

@@ -1,5 +1,14 @@
 import { connect } from "react-redux";
-import Typography from "@material-ui/core/Typography";
+import {
+  Box,
+  Typography,
+  Table,
+  TableBody,
+  TableCell,
+  TableContainer,
+  TableHead,
+  TableRow,
+} from "@material-ui/core";
 
 import "../../Styles/Form.css";
 
@@ -12,36 +21,53 @@ function Component(props: Props) {
   const data = props.results;
   let display;
   if (data.length > 0) {
-    display = data.map((element: any) => {
-      return (
-        <div className="box">
-          <Typography variant="h5" color="textPrimary">
-            Vaacination Center:{element.address}
-          </Typography>
-          {element.sessions.map((data: any) => {
-            return (
-              <>
-                <Typography variant="h6" color="textPrimary">
-                  Date:{data.date}
-                </Typography>
-
-                <Typography variant="h6" color="textPrimary">
-                  Minimum Age Limit:{data.min_age_limit}
-                </Typography>
-
-                <Typography variant="h6" color="textPrimary">
-                  Slots Available:{data.available_capacity}
-                </Typography>
-
-                <Typography variant="h6" color="textPrimary">
-                  Vaccine Type:{data.vaccine}
-                </Typography>
-              </>
-            );
-          })}
-        </div>
-      );
-    });
+    display = (
+      <>
+        <TableContainer>
+          <Table aria-label="simple table">
+            <TableHead>
+              <TableCell>Vaccination Center</TableCell>
+              <TableCell>Minimum Age Limit</TableCell>
+              <TableCell align="center">Date</TableCell>
+              <TableCell>Available Slots</TableCell>
+              <TableCell>Vaccine Type</TableCell>
+              <TableCell>Dose1 Slots</TableCell>
+              <TableCell>Dose2 Slots</TableCell>
+            </TableHead>
+            <TableBody>
+              {data.map((element: any) => (
+                <TableRow>
+                  <TableCell>{element.name}</TableCell>
+                  {element.sessions.map((data: any) => (
+                    <>
+                      <TableCell align="center">{data.min_age_limit}</TableCell>
+                      <TableCell>{data.date}</TableCell>
+                      <TableCell align="center">
+                        {data.available_capacity}
+                      </TableCell>
+                      <TableCell>{data.vaccine}</TableCell>
+                      <TableCell align="center">
+                        {data.available_capacity_dose1}
+                      </TableCell>
+                      <TableCell align="center">
+                        {data.available_capacity_dose2}
+                      </TableCell>
+                    </>
+                  ))}
+                </TableRow>
+              ))}
+            </TableBody>
+          </Table>
+        </TableContainer>
+        <Box marginTop="5px" className="flex-container">
+          <a href="https://www.cowin.gov.in/home" target="blank">
+            <Typography variant="overline">
+              * Please click to book your Covid Vaccine.
+            </Typography>
+          </a>
+        </Box>
+      </>
+    );
   } else {
     display = (
       <div className="box">
@@ -54,10 +80,8 @@ function Component(props: Props) {
   return (
     <>
       <div className="flex-container">
-        <Typography variant="h3" color="inherit">
-          Vaccine Availability
-        </Typography>
-        <div>{display}</div>:
+        <Typography variant="h4">Vaccine Availability</Typography>
+        <div>{display}</div>
       </div>
     </>
   );
