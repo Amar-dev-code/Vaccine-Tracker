@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Vaccine-Tracker/static/css/main.cd23bd29.chunk.css",
-    "main.js": "/Vaccine-Tracker/static/js/main.fb8253fe.chunk.js",
+    "main.js": "/Vaccine-Tracker/static/js/main.9a2ed6cd.chunk.js",
     "runtime-main.js": "/Vaccine-Tracker/static/js/runtime-main.131d9f4b.js",
     "static/js/2.76e7e832.chunk.js": "/Vaccine-Tracker/static/js/2.76e7e832.chunk.js",
     "static/js/3.b928d617.chunk.js": "/Vaccine-Tracker/static/js/3.b928d617.chunk.js",
@@ -12,6 +12,6 @@
     "static/js/runtime-main.131d9f4b.js",
     "static/js/2.76e7e832.chunk.js",
     "static/css/main.cd23bd29.chunk.css",
-    "static/js/main.fb8253fe.chunk.js"
+    "static/js/main.9a2ed6cd.chunk.js"
   ]
 }
