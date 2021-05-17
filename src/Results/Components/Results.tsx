@@ -35,11 +35,11 @@ function Component(props: Props) {
               <TableCell>Dose2 Slots</TableCell>
             </TableHead>
             <TableBody>
-              {data.map((element: any) => (
-                <TableRow>
-                  <TableCell>{element.name}</TableCell>
-                  {element.sessions.map((data: any) => (
-                    <>
+              {data.map((element: any) =>
+                element.sessions.map((data: any) => {
+                  return (
+                    <TableRow>
+                      <TableCell>{element.name}</TableCell>
                       <TableCell align="center">{data.min_age_limit}</TableCell>
                       <TableCell>{data.date}</TableCell>
                       <TableCell align="center">
@@ -52,10 +52,10 @@ function Component(props: Props) {
                       <TableCell align="center">
                         {data.available_capacity_dose2}
                       </TableCell>
-                    </>
-                  ))}
-                </TableRow>
-              ))}
+                    </TableRow>
+                  );
+                })
+              )}
             </TableBody>
           </Table>
         </TableContainer>
