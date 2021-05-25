@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/Vaccine-Tracker/static/css/main.cd23bd29.chunk.css",
-    "main.js": "/Vaccine-Tracker/static/js/main.fb8253fe.chunk.js",
-    "runtime-main.js": "/Vaccine-Tracker/static/js/runtime-main.131d9f4b.js",
-    "static/js/2.76e7e832.chunk.js": "/Vaccine-Tracker/static/js/2.76e7e832.chunk.js",
-    "static/js/3.b928d617.chunk.js": "/Vaccine-Tracker/static/js/3.b928d617.chunk.js",
+    "main.css": "/Vaccine-Tracker/static/css/main.0e54bcda.chunk.css",
+    "main.js": "/Vaccine-Tracker/static/js/main.743e93df.chunk.js",
+    "runtime-main.js": "/Vaccine-Tracker/static/js/runtime-main.f0434eae.js",
+    "static/js/2.8fdb9c5d.chunk.js": "/Vaccine-Tracker/static/js/2.8fdb9c5d.chunk.js",
+    "static/js/3.c1c0b6f5.chunk.js": "/Vaccine-Tracker/static/js/3.c1c0b6f5.chunk.js",
     "index.html": "/Vaccine-Tracker/index.html",
-    "static/js/2.76e7e832.chunk.js.LICENSE.txt": "/Vaccine-Tracker/static/js/2.76e7e832.chunk.js.LICENSE.txt"
+    "static/js/2.8fdb9c5d.chunk.js.LICENSE.txt": "/Vaccine-Tracker/static/js/2.8fdb9c5d.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.131d9f4b.js",
-    "static/js/2.76e7e832.chunk.js",
-    "static/css/main.cd23bd29.chunk.css",
-    "static/js/main.fb8253fe.chunk.js"
+    "static/js/runtime-main.f0434eae.js",
+    "static/js/2.8fdb9c5d.chunk.js",
+    "static/css/main.0e54bcda.chunk.css",
+    "static/js/main.743e93df.chunk.js"
   ]
 }
