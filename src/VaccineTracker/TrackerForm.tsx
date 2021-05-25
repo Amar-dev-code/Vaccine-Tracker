@@ -67,22 +67,24 @@ function Component(props: Props) {
 
   if (props.isLoading) {
     return (
-      <>
+      <div className="box-container">
         {Form()}
         <div className="flex-container">
           <CircularProgress />
         </div>
-      </>
+      </div>
     );
   } else if (props.isResponseReceived) {
     return (
-      <>
-        {Form()}
-        <Results />
-      </>
+      <div className="box-container">
+        <div className="flex-container">{Form()}</div>
+        <div>
+          <Results />
+        </div>
+      </div>
     );
   } else {
-    return <>{Form()}</>;
+    return <div className="box-container">{Form()}</div>;
   }
 }
 
