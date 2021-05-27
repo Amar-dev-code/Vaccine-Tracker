@@ -1,26 +1,39 @@
-.viewScreen {
-  width: 400px;
-}
-
-.wrapper {
-  position: relative;
-}
-
-.sticky-col {
-  position: -webkit-sticky;
-  position: sticky;
-}
-
-.first-col {
-  width: 100px;
-  min-width: 100px;
-  max-width: 100px;
-  left: 0px;
-}
-
-.second-col {
-  width: 150px;
-  min-width: 150px;
-  max-width: 150px;
-  left: 100px;
+@media only screen and (max-width: 767px) {
+  .viewScreen {
+    width: 300px;
+  }
+  .hide-col {
+    width: 100px;
+  }
+  .wrapper {
+    position: relative;
+  }
+  .sticky-col1 {
+    position: sticky;
+    left: 0px;
+    z-index: 2000;
+    background: darkgray;
+  }
+  .sticky-col {
+    position: sticky;
+    z-index: 2000;
+  }
+  .sticky-col2 {
+    position: sticky;
+    left: 103px;
+    z-index: 2000;
+    background: darkgray;
+  }
+  .first-col {
+    width: 50px;
+    left: 0px;
+    z-index: 2000;
+    background: grey;
+  }
+  .second-col {
+    width: 150px;
+    left: 103px;
+    z-index: 2000;
+    background: grey;
+  }
 }

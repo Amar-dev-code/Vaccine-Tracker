@@ -9,11 +9,14 @@
   margin-left: 67px;
   margin-bottom: 20px;
 }
-.box-container {
-  margin: 10px 10px 10px 10px;
-  border: 1px solid black;
-  border-radius: 25px;
-  color: black;
-  padding: auto;
-  width: auto;
+
+@media only screen and (min-width: 768px) {
+  .box-container {
+    margin: 10px 10px 10px 10px;
+    border: 1px solid black;
+    border-radius: 5px;
+    color: black;
+    padding: auto;
+    width: auto;
+  }
 }
