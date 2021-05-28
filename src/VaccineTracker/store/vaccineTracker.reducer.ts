@@ -1,19 +1,15 @@
-import {
-  GETVACCINEINFO,
-  ONAPISUCCESS,
-  ONAPIFAILURE,
-} from "./vaccineTracker.types";
+import { GETVACCINEINFO, ONAPISUCCESS } from "./vaccineTracker.types";
 
 interface vaccineReducer {
   isLoading: boolean;
-  hasResponseReceived: boolean;
+  isResponseReceived: boolean;
   hasErrorOccurred: boolean;
   vaccineResults: any;
 }
 
 const INITIAL_STATE: vaccineReducer = {
   isLoading: false,
-  hasResponseReceived: false,
+  isResponseReceived: false,
   hasErrorOccurred: false,
   vaccineResults: {},
 };
@@ -30,7 +26,7 @@ export const vaccineReducer = (state = INITIAL_STATE, action: any) => {
       return {
         ...state,
         vaccineResults: action.response,
-        hasResponseReceived: true,
+        isResponseReceived: true,
         isLoading: false,
       };
 

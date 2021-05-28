@@ -10,7 +10,7 @@ import {
 
 import { Results } from "../Results/Components/Results";
 import "../Styles/Form.css";
-import { Payload } from "../Interfaces/payload";
+import { requestPayload } from "../Interfaces/payload";
 
 import { getVaccineInfo } from "../VaccineTracker/store/vaccineTracker.actions";
 
@@ -18,9 +18,10 @@ const mapStateToProps = (state: any) => {
   return {
     result: state.vaccineTracker.vaccineResults,
     isLoading: state.vaccineTracker.isLoading,
-    isResponseReceived: state.vaccineTracker.hasResponseReceived,
+    isResponseReceived: state.vaccineTracker.isResponseReceived,
   };
 };
+
 type Props = ReturnType<typeof mapStateToProps>;
 
 function Component(props: Props) {
@@ -28,15 +29,14 @@ function Component(props: Props) {
   const formik = useFormik({
     initialValues: {
       pincode: "",
-      date: "",
     },
-    onSubmit: (values: Payload) => {
-      dispatch(getVaccineInfo(values));
+    onSubmit: (value: requestPayload) => {
+      dispatch(getVaccineInfo(value));
     },
   });
-  function Form() {
+  function trackVaccineForm() {
     return (
-      <>
+      <div className="bigScreen-container">
         <div className="flex-container">
           <Typography variant="h5">India Covid Vaccine Tracker</Typography>
           <Box marginTop="5px">
@@ -53,39 +53,20 @@ function Component(props: Props) {
                   value={formik.values.pincode}
                 />
               </div>
-              <div className="space">
+              <div className="button-container">
                 <Button type="submit" variant="contained" color="primary">
                   Submit
                 </Button>
               </div>
             </form>
           </Box>
-        </div>
-      </>
-    );
-  }
-
-  if (props.isLoading) {
-    return (
-      <div className="box-container">
-        {Form()}
-        <div className="flex-container">
-          <CircularProgress />
+          {props.isLoading ? <CircularProgress /> : null}
+          {props.isResponseReceived ? <Results /> : null}
         </div>
       </div>
     );
-  } else if (props.isResponseReceived) {
-    return (
-      <div className="box-container">
-        <div className="flex-container">{Form()}</div>
-        <div>
-          <Results />
-        </div>
-      </div>
-    );
-  } else {
-    return <div className="box-container">{Form()}</div>;
   }
+  return <>{trackVaccineForm()}</>;
 }
 
 export const TrackerForm = connect(mapStateToProps)(Component);

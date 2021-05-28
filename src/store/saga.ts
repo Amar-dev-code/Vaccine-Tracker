@@ -1,9 +1,7 @@
-import { request } from "http";
 import { call, put, takeEvery } from "redux-saga/effects";
-import { getVaccineResults } from "../Api/getVaccineInfo";
 
+import { getVaccineResults } from "../Api/getVaccineInfo";
 import {
-  getVaccineInfo,
   onApiFailure,
   onApiSuccess,
 } from "../VaccineTracker/store/vaccineTracker.actions";

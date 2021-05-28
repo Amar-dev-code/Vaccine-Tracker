@@ -1,8 +1,8 @@
 import Axios from "axios";
 
-import { Payload } from "../Interfaces/payload";
+import { requestPayload } from "../Interfaces/payload";
 
-export async function getVaccineResults(values: Payload) {
+export async function getVaccineResults(values: requestPayload) {
   const currentDate = new Date().toDateString();
   const dateArray = currentDate.split(" ");
   const dateInFormat = formatDate(dateArray);

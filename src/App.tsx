@@ -1,7 +1,7 @@
 import { Provider } from "react-redux";
 
 import { TrackerForm } from "./VaccineTracker/TrackerForm";
-import { store } from "./store/index";
+import { store } from "./Store/index";
 
 function App() {
   return (
