@@ -29,7 +29,7 @@ function formatDate(dateArray: string[]) {
     case "May":
       month = "05";
       break;
-    case "June":
+    case "Jun":
       month = "06";
       break;
     case "July":
