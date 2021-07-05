@@ -3,9 +3,9 @@ import {
   ONAPIFAILURE,
   ONAPISUCCESS,
 } from "./vaccineTracker.types";
-import { Payload } from "../../Interfaces/payload";
+import { requestPayload } from "../../Interfaces/payload";
 
-export const getVaccineInfo = (data: Payload) => {
+export const getVaccineInfo = (data: requestPayload) => {
   return {
     type: GETVACCINEINFO,
     request: data,

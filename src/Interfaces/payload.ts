@@ -1,4 +1,3 @@
-export interface Payload{
-    pincode:string,
-    date:string
+export interface requestPayload {
+  pincode: string;
 }
