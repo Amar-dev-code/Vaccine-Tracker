@@ -14,16 +14,16 @@ export async function getVaccineResults(values: requestPayload) {
 function formatDate(dateArray: string[]) {
   let month = "";
   switch (dateArray[1]) {
-    case "January":
+    case "Jan":
       month = "01";
       break;
-    case "February":
+    case "Feb":
       month = "02";
       break;
-    case "March":
+    case "Mar":
       month = "03";
       break;
-    case "April":
+    case "Apr":
       month = "04";
       break;
     case "May":
@@ -32,24 +32,24 @@ function formatDate(dateArray: string[]) {
     case "Jun":
       month = "06";
       break;
-    case "July":
+    case "Jul":
       month = "07";
       break;
-    case "August":
+    case "Aug":
       month = "08";
       break;
-    case "September":
+    case "Sep":
       month = "09";
       break;
-    case "October":
+    case "Oct":
       month = "10";
       break;
-    case "November":
+    case "Nov":
       month = "11";
       break;
-    case "December":
+    case "Dec":
       month = "12";
       break;
   }
-  return dateArray[2] + month + dateArray[3];
+  return month + dateArray[2] + dateArray[3];
 }
