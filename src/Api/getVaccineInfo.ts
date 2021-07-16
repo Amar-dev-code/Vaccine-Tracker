@@ -51,5 +51,5 @@ function formatDate(dateArray: string[]) {
       month = "12";
       break;
   }
-  return month + dateArray[2] + dateArray[3];
+  return dateArray[2]+ "-"+month+"-" + dateArray[3];
 }
